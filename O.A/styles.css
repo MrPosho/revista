@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    color: #333;
+}
+
+#piano {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.key {
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 2px;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s;
+}
+
+.key.white {
+    width: 40px;
+    height: 150px;
+    background: #fff;
+}
+
+.key.black {
+    width: 30px;
+    height: 100px;
+    background: #000;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.key.black::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -15px;
+    right: -15px;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.key:active {
+    background: #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
